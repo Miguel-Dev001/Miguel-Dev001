@@ -1,91 +1,35 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyM4ajCmaV3IAPSOSCeL+p3H",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/Miguel-Dev001/Miguel-Dev001/blob/main/Fun%C3%A7%C3%B5es%20em%20Python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": 13,
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "BbygvDxWyFrl",
-        "outputId": "bc6a5555-8176-4a38-c5b4-0b6e28fa67b8"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Digite a nota (ou 0 para finalizar): 0\n",
-            "Relatório Final:\n",
-            "Notas: [7, 6, 9.5, 8.5, 10]\n",
-            "Média: 8.2\n",
-            "Situação: Aprovado\n"
-          ]
-        }
-      ],
-      "source": [
-        "# Funções em Python - Atividade\n",
-        "\n",
-        "\n",
-        "# Lista de notas dos estudantes\n",
-        "def adicionar_notas():\n",
-        "    notas = [7, 6, 9.5, 8.5, 10]\n",
-        "    while True:\n",
-        "        nota = float(input(\"Digite a nota (ou 0 para finalizar): \"))\n",
-        "        if nota == 0:\n",
-        "            break\n",
-        "        notas.append(nota)\n",
-        "    return notas\n",
-        "\n",
-        "# Função para calcular a média\n",
-        "def calcular_media(notas):\n",
-        "    if not notas:\n",
-        "        return 0\n",
-        "    return sum(notas) / len(notas)\n",
-        "\n",
-        "# Verificar se os estudantes foram aprovados\n",
-        "def verificar_situacao(media, nota_minima=7):\n",
-        "    return \"Aprovado\" if media >= nota_minima else \"Reprovado\"\n",
-        "\n",
-        "# Resultados\n",
-        "def gerar_relatorio(notas, media, situacao):\n",
-        "    print(\"Relatório Final:\")\n",
-        "    print(\"Notas:\", notas)\n",
-        "    print(\"Média:\", media)\n",
-        "    print(\"Situação:\", situacao)\n",
-        "\n",
-        "if __name__ == \"__main__\":\n",
-        "    notas = adicionar_notas()\n",
-        "    media = calcular_media(notas)\n",
-        "    situacao = verificar_situacao(media)\n",
-        "    gerar_relatorio(notas, media, situacao)"
-      ]
-    }
-  ]
-}
+# Funções em Python - Atividade
+
+
+# Lista de notas dos estudantes
+def adicionar_notas():
+    notas = [7, 6, 9.5, 8.5, 10]
+    while True:
+        nota = float(input("Digite a nota (ou 0 para finalizar): "))
+        if nota == 0:
+            break
+        notas.append(nota)
+    return notas
+
+# Função para calcular a média
+def calcular_media(notas):
+    if not notas:
+        return 0
+    return sum(notas) / len(notas)
+
+# Verificar se os estudantes foram aprovados
+def verificar_situacao(media, nota_minima=7):
+    return "Aprovado" if media >= nota_minima else "Reprovado"
+
+# Resultados
+def gerar_relatorio(notas, media, situacao):
+    print("Relatório Final:")
+    print("Notas:", notas)
+    print("Média:", media)
+    print("Situação:", situacao)
+
+if __name__ == "__main__":
+    notas = adicionar_notas()
+    media = calcular_media(notas)
+    situacao = verificar_situacao(media)
+    gerar_relatorio(notas, media, situacao)
