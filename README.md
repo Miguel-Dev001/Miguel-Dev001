@@ -3,7 +3,7 @@ Miguel Henrique
 
 Hello, Devs!!!
 
-- 🔭 Atualmente não estou trabalhando...
+- 🔭 Atualmente não estou trabalhando na área...
 - 🌱 Estou estudando e aprimorando meus conhecimentos.
 
 
